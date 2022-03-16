@@ -1,13 +1,12 @@
 <template>
   <div class="app">
-    <Tweet />
+    <Tweet v-for="tweet in tweets" :key="tweet.user" :message="tweet.message" :user="tweet.user" />
   </div>
 </template>
 
 <script>
 
 import Tweet from './components/Tweet.vue';
-
 export default {
     data: () => ({
         tweets: [
